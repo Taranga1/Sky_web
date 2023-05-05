@@ -202,7 +202,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="d">
+                            {{-- <div class="d">
                                 <div class="item wow fadeIn" data-wow-duration="1s" data-wow-delay="1.1s">
                                     <div class="icon">
                                         <img src="assets/images/service-icon-04.png" alt="">
@@ -212,7 +212,7 @@
                                         <p>Various Scholorships .</p>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
                     </div>
                 </div>
@@ -225,12 +225,12 @@
             <div class="row">
                 <div class="col-lg-6 align-self-center  wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
                     <div class="left-image">
-                        <img src="https://media0.giphy.com/media/KxnrFsWmiMPIreMoES/giphy.gif?cid=ecf05e47yd1oynk4wa086zzhkvgy77eb6xmmnba0s3k1oqmr&ep=v1_stickers_search&rid=giphy.gif&ct=s" alt="" height="200px" width="270px">
+                        <img src="https://skyrider.edu.np/static/img/log.png" alt="Broken" height="400px" width="200px">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.2s">
                     <div class="section-heading">
-                        <h2><em></em> <span> innovative curriculum, experienced teachers, and modern facilities.</span>
+                        <h2><em></em> <span> Clean Environment, experienced teachers, and modern facilities.</span>
                         </h2>
                         <p>Provides educational facility which may include modern classrooms and facilities, advanced
                             technology,

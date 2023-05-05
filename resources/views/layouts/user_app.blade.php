@@ -20,6 +20,136 @@
 
 
 
+
+
+
+
+
+#container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#slides {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#slides .slide {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 55%;
+}
+#slides .slide .title {
+  position: absolute;
+  top: calc(50% - 0.5em);
+  left: 20px;
+  z-index: 2;
+  padding-top: 5px;
+  font-family: "Reem Kufi", sans-serif;
+  font-size: 5em;
+  color: white;
+  overflow: hidden;
+}
+#slides .slide .title .title-text {
+  display: block;
+  transform: translateY(1.2em);
+  transition: transform 1s ease-in-out;
+}
+#slides .slide .slide-partial {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 1s ease-in-out;
+}
+#slides .slide .slide-partial img {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 1s ease-in-out;
+}
+#slides .slide .slide-left {
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+}
+#slides .slide .slide-left img {
+  top: 0;
+  right: 0;
+  -o-object-position: 100% 50%;
+     object-position: 100% 50%;
+  transform: translateX(50%);
+}
+#slides .slide .slide-right {
+  top: 0;
+  right: 0;
+  transform: translateX(100%);
+  transition-delay: 0.2s;
+}
+#slides .slide .slide-right img {
+  top: 0;
+  left: 0;
+  -o-object-position: 0% 50%;
+     object-position: 0% 50%;
+  transition-delay: 0.2s;
+  transform: translateX(-50%);
+}
+#slides .slide.active .title .title-text {
+  transform: translate(0);
+  transition-delay: 0.3s;
+}
+#slides .slide.active .slide-partial, #slides .slide.active .slide-partial img {
+  transform: translateX(0);
+}
+
+#slide-select {
+  position: absolute;
+  bottom: 45%;
+  left: 0%;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-family: "Reem Kufi", sans-serif;
+  font-size: 1.5em;
+  font-weight: lighter;
+  color: white;
+}
+#slide-select li {
+  position: relative;
+  cursor: pointer;
+  margin: 0 5px;
+}
+#slide-select li.prev:hover {
+  transform: translateX(-2px);
+}
+#slide-select li.next:hover {
+  transform: translateX(2px);
+}
+#slide-select .selector {
+  height: 14px;
+  width: 14px;
+  border: 2px solid white;
+  background-color: transparent;
+  transition: background-color 0.5s ease-in-out;
+}
+#slide-select .selector.current {
+  background-color: white;
+}
+
+
+
+
+
+
+
         :root {
   --surface-color: #fff;
   --curve: 40;
@@ -523,7 +653,7 @@ body {
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg " color-on-scroll="500">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="">Teacher's Info</a>
+                    <a class="navbar-brand" href="">Dashboard</a>
                     <button href="" class="navbar-toggler navbar-toggler-right" type="button"
                         data-toggle="collapse" aria-controls="navigation-index" aria-expanded="false"
                         aria-label="Toggle navigation">
@@ -546,7 +676,50 @@ body {
 
             {{-- HTML BODY STARTS HERE --}}
 
+            <div id="container">
+                <ul id="slides">
+                  <li class="slide">
+                    <div class="slide-partial slide-left"><img src="https://www.skyrider.edu.np/media/slider_img/second.png"/></div>
+                    <div class="slide-partial slide-right"><img src="https://scontent.fbhr1-1.fna.fbcdn.net/v/t39.30808-6/339360245_1274398169823536_5270993922244408876_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=2fMAu-i0_hMAX8kYpdT&_nc_ht=scontent.fbhr1-1.fna&oh=00_AfCtTJNouF4SkQauqGrcDa6HoQoNoQDPzd8Aju1XQVGwYA&oe=64571EE4"/></div>
+                    <h1 class="title"><span class="title-text"></span></h1>
+                  </li>
+                  <li class="slide">
+                    <div class="slide-partial slide-left"><img src="https://www.skyrider.edu.np/static/img/sk4.jpg"/></div>
+                    <div class="slide-partial slide-right"><img src="https://scontent.fbhr1-1.fna.fbcdn.net/v/t39.30808-6/337870476_605010951680507_3856025104711266275_n.jpg?stp=dst-jpg_s600x600&_nc_cat=107&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=HR00qWvP_TkAX-C_ON5&_nc_ht=scontent.fbhr1-1.fna&oh=00_AfDfLGjinzf-aQCcaJCd4XrdWtid1c-P_sbkHOB-NLa0tQ&oe=6457AFBB"/></div>
+                    <h1 class="title"><span class="title-text"></span></h1>
+                  </li>
+                  <li class="slide">
+                    <div class="slide-partial slide-right"><img src="https://skyrider.edu.np/static/img/log.png"/></div>
+                    <div class="slide-partial slide-left"><img src="https://scontent.fbhr1-1.fna.fbcdn.net/v/t39.30808-6/311877172_102976459281504_1672528335168855506_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=R7nSrMCDk0wAX_wNq2h&_nc_ht=scontent.fbhr1-1.fna&oh=00_AfBB058tnRFsqMPV2yV_e2bwC4dUUrUKWRNQIV7m1lpYcw&oe=6457749D"/></div>
+                    
+                    <h1 class="title"><span class="title-text"></span></h1>
+                  </li>
+                  <li class="slide">
+                    <div class="slide-partial slide-left"><img src="https://scontent.fbhr1-1.fna.fbcdn.net/v/t39.30808-6/342781089_585441730204518_105413597396410806_n.jpg?stp=dst-jpg_s600x600&_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=ywMjEHa6o0QAX-blQI-&_nc_ht=scontent.fbhr1-1.fna&oh=00_AfDt1nvwwJK6B7TBJHd6bpH3yUtOkvHemCp_L5LyoSrKcw&oe=6458A3C9"/></div>
+                    <div class="slide-partial slide-right"><img src="https://scontent.fbhr1-1.fna.fbcdn.net/v/t39.30808-6/326409932_713695380326640_5816006625209458817_n.jpg?stp=cp6_dst-jpg&_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=c8E9XDC7H84AX9AvIsr&_nc_ht=scontent.fbhr1-1.fna&oh=00_AfDDnMo53KWIqdLwTCwk6oQ59AuTIRbR_iLT9lfq5a1ecw&oe=64577F89"/></div>
+                    <h1 class="title"><span class="title-text"></span></h1>
+                  </li>
+                  <li class="slide">
+                    <div class="slide-partial slide-left"><img src="https://scontent.fbhr1-1.fna.fbcdn.net/v/t39.30808-6/311877172_102976459281504_1672528335168855506_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=R7nSrMCDk0wAX_wNq2h&_nc_ht=scontent.fbhr1-1.fna&oh=00_AfBB058tnRFsqMPV2yV_e2bwC4dUUrUKWRNQIV7m1lpYcw&oe=6457749D"/></div>
+                    <div class="slide-partial slide-right"><img src="https://scontent.fbhr1-1.fna.fbcdn.net/v/t39.30808-6/343996434_1731487517254026_6778638098709158521_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=RheDauGqOA8AX_jtwkV&_nc_ht=scontent.fbhr1-1.fna&oh=00_AfBIcWwZT1Me3H2laLQ7VPokXGgRbbAoiNeFnST58E7zow&oe=6457D831"/></div>
+                    <h1 class="title"><span class="title-text"></span></h1>
+                  </li>
+                </ul>
+                <ul id="slide-select">
+                  <li class="btn prev"><</li>
+                  <li class="selector"></li>
+                  <li class="selector"></li>
+                  <li class="selector"></li>
+                  <li class="selector"></li>
+                  <li class="selector"></li>
+                  <li class="btn next">></li>
+                </ul>
+              </div>
 
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+              {{-- Teacher's Info Starts Here --}}
             <ul class="cards">
                 <li>
                   <a href="https://www.facebook.com/madan.puri.10" target="_blank" class="card">
@@ -977,9 +1150,70 @@ body {
         }
     };
 </script>
+    
+<script>
+let $slides, interval, $selectors, $btns, currentIndex, nextIndex;
 
-<script type="text/javascript">
-    alert("Have a Nice Day Browsing 🙃 🍰");
-    </script>
+let cycle = index => {
+  let $currentSlide, $nextSlide, $currentSelector, $nextSelector;
+
+  nextIndex = index !== undefined ? index : nextIndex;
+
+  $currentSlide = $($slides.get(currentIndex));
+  $currentSelector = $($selectors.get(currentIndex));
+
+  $nextSlide = $($slides.get(nextIndex));
+  $nextSelector = $($selectors.get(nextIndex));
+
+  $currentSlide.removeClass("active").css("z-index", "0");
+
+  $nextSlide.addClass("active").css("z-index", "1");
+
+  $currentSelector.removeClass("current");
+  $nextSelector.addClass("current");
+
+  currentIndex = index !== undefined ?
+  nextIndex :
+  currentIndex < $slides.length - 1 ?
+  currentIndex + 1 :
+  0;
+
+  nextIndex = currentIndex + 1 < $slides.length ? currentIndex + 1 : 0;
+};
+
+$(() => {
+  currentIndex = 0;
+  nextIndex = 1;
+
+  $slides = $(".slide");
+  $selectors = $(".selector");
+  $btns = $(".btn");
+
+  $slides.first().addClass("active");
+  $selectors.first().addClass("current");
+
+  interval = window.setInterval(cycle, 6000);
+
+  $selectors.on("click", e => {
+    let target = $selectors.index(e.target);
+    if (target !== currentIndex) {
+      window.clearInterval(interval);
+      cycle(target);
+      interval = window.setInterval(cycle, 6000);
+    }
+  });
+
+  $btns.on("click", e => {
+    window.clearInterval(interval);
+    if ($(e.target).hasClass("prev")) {
+      let target = currentIndex > 0 ? currentIndex - 1 : $slides.length - 1;
+      cycle(target);
+    } else if ($(e.target).hasClass("next")) {
+      cycle();
+    }
+    interval = window.setInterval(cycle, 6000);
+  });
+});
+</script>
 
 </html>

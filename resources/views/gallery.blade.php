@@ -18,83 +18,66 @@
     <style>
        
 
-       body {
-  padding: 0px;
-  position: relative;
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       * {
+  box-sizing: border-box;
 }
 
-.gallery {
-  width: 600px;
-  margin: auto;
-  border-radius: 3px;
-  overflow: hidden;
-}
-
-.img-c {
-  width: 200px;
-  height: 200px;
-  float: left;
-  position: relative;
-  overflow: hidden;
-}
-
-.img-w {
-  position: absolute;
+.image-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   width: 100%;
+  grid-gap: 0.5rem;
+}
+.image-container .image {
+  position: relative;
+  padding-bottom: 100%;
+}
+.image-container .image img {
   height: 100%;
-  background-size: cover;
-  background-position: center;
-  cursor: pointer;
-  transition: transform ease-in-out 300ms;
-}
-
-.img-w img {
-  display: none;
-}
-
-.img-c {
-  transition: width ease 400ms, height ease 350ms, left cubic-bezier(0.4, 0, 0.2, 1) 420ms, top cubic-bezier(0.4, 0, 0.2, 1) 420ms;
-}
-
-.img-c:hover .img-w {
-  transform: scale(1.08);
-  transition: transform cubic-bezier(0.4, 0, 0.2, 1) 450ms;
-}
-
-.img-c.active {
-  width: 100% !important;
-  height: 100% !important;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  left: 0;
   position: absolute;
-  z-index: 2;
+  top: 0;
 }
-
-.img-c.postactive {
-  position: absolute;
-  z-index: 2;
-  pointer-events: none;
+.image-container .image img:nth-of-type(1) {
+  filter: grayscale(1) brightness(40%);
 }
-
-.img-c.active.positioned {
-  left: 0 !important;
-  top: 0 !important;
-  transition-delay: 50ms;
+.image-container .image img:nth-of-type(2) {
+  -webkit-clip-path: var(--clip-start);
+          clip-path: var(--clip-start);
+  transition: -webkit-clip-path 0.5s;
+  transition: clip-path 0.5s;
+  transition: clip-path 0.5s, -webkit-clip-path 0.5s;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.image-container .image:hover img:nth-of-type(2) {
+  -webkit-clip-path: var(--clip-end);
+          clip-path: var(--clip-end);
+}
 
 
 
@@ -462,7 +445,7 @@
 
             <br>
                 
-            <div class="gallery">
+            {{-- <div class="gallery">
                 <div class="img-w">
                   <img src="https://scontent.fbhr1-1.fna.fbcdn.net/v/t31.18172-8/22538988_1507630625985888_9190710994922876043_o.jpg?_nc_cat=106&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=4pGdjgP1qAwAX9oti-n&_nc_ht=scontent.fbhr1-1.fna&oh=00_AfDRtRu1qLVBje5OULVLxFjrKFMpCSiBrl_mTd3FCXmQbg&oe=6466AD60" alt="" /></div>
                 <div class="img-w"><img src="https://imgs.search.brave.com/lWqbDW1WwIMbVH0GrhbeHnsp4D1NzTwkzEaUqfWfzEs/rs:fit:1090:630:1/g:ce/aHR0cHM6Ly93d3cu/c2t5cmlkZXIuZWR1/Lm5wL21lZGlhL2dh/bGxlcnlfaW1hZ2Uv/UHJpbWFyeV9CdWls/ZGluZ19CbG9ja19B/LnBuZw" alt="" /></div>
@@ -473,7 +456,23 @@
                 <div class="img-w"><img src="https://imgs.search.brave.com/wU86qsCETACbLVtSx_60wifJ346dXoBFbYnmKdVRWzA/rs:fit:1093:325:1/g:ce/aHR0cHM6Ly93d3cu/c2t5cmlkZXIuZWR1/Lm5wL21lZGlhL2dh/bGxlcnlfaW1hZ2Uv/U2Vjb25kYXJ5X0Js/b2NrX0IucG5n" alt="" /></div>
                 <div class="img-w"><img src="https://imgs.search.brave.com/ogysQ5ROnm1RDBMdAayMwcQWhmxh2ejLOdM9a7WcPYs/rs:fit:690:829:1/g:ce/aHR0cHM6Ly93d3cu/c2t5cmlkZXIuZWR1/Lm5wL21lZGlhL3Vz/ZXJfaW1hZ2VzL3Nr/MTdfR2tMaDZvMi5q/cGc" alt="" /></div>
                 <div class="img-w"><img src="https://imgs.search.brave.com/u46kWaP9qmZ-5muindE6nrSck95fjYjGCIWDvP-2FuE/rs:fit:350:350:1/g:ce/aHR0cHM6Ly9za3ly/aWRlci5lZHUubnAv/c3RhdGljL2ltZy9s/b2cucG5n" alt="" /></div>
-              </div>
+              </div> --}}
+
+              
+              
+<div class="image-container">
+    <div class="image" style="--clip-start: ellipse(0 0 at 0 0); --clip-end: ellipse(150% 150% at 0 0);"><img src="https://www.skyrider.edu.np/media/slider_img/sk10_1.jpg"/><img src="https://www.skyrider.edu.np/media/slider_img/sk10_1.jpg"/></div>
+    <div class="image" style="--clip-start: inset(100% 0 0 0); --clip-end: inset(0 0 0 0);"><img src="https://www.skyrider.edu.np/media/gallery_image/Primary_Building_Block_A.png"/><img src="https://www.skyrider.edu.np/media/gallery_image/Primary_Building_Block_A.png"/></div>
+    <div class="image" style="--clip-start: ellipse(0 0 at 100% 0); --clip-end: ellipse(150% 150% at 100% 0);"><img src="https://i.ytimg.com/vi/F6diHhV_27U/maxresdefault.jpg"/><img src="https://i.ytimg.com/vi/F6diHhV_27U/maxresdefault.jpg"/></div>
+    <div class="image" style="--clip-start: polygon(50% 50%,  50% 50%,  50% 50%, 50% 50%); --clip-end: polygon(-50% 50%, 50% -50%, 150% 50%, 50% 150%);"><img src="https://www.skyrider.edu.np/media/gallery_image/Plus_2_Block_A_B.png"/><img src="https://www.skyrider.edu.np/media/gallery_image/Plus_2_Block_A_B.png"/></div>
+    <div class="image" style="--clip-start: circle(0); --clip-end: circle(125%);"><img src="https://www.skyrider.edu.np/static/img/sk4.jpg"/><img src="https://www.skyrider.edu.np/static/img/sk4.jpg"/></div>
+    <div class="image" style="--clip-start: inset(100% 100% 100% 100%); --clip-end: inset(0 0 0 0);"><img src="https://th.bing.com/th/id/R.f0c61b1f3d2ac803d4f6d6e7ad9905d9?rik=9Dkk14CQUaooow&pid=ImgRaw&r=0"/><img src="https://th.bing.com/th/id/R.f0c61b1f3d2ac803d4f6d6e7ad9905d9?rik=9Dkk14CQUaooow&pid=ImgRaw&r=0"/></div>
+    <div class="image" style="--clip-start: ellipse(0 0 at 0 100%); --clip-end: ellipse(150% 150% at 0 100%);"><img src="https://skyrider.edu.np/static/img/log.png"/><img src="https://skyrider.edu.np/static/img/log.png"/></div>
+    <div class="image" style="--clip-start: inset(0 0 100% 0); --clip-end: inset(0 0 0 0);"><img src="https://www.skyrider.edu.np/media/gallery_image/Secondary_Block_B.png"/><img src="https://www.skyrider.edu.np/media/gallery_image/Secondary_Block_B.png"/></div>
+    <div class="image" style="--clip-start: ellipse(0 0 at 100% 100%); --clip-end: ellipse(150% 150% at 100% 100%);"><img src="https://www.skyrider.edu.np/media/slider_img/second.png"/><img src="https://www.skyrider.edu.np/media/slider_img/second.png"/></div>
+    <div class="image" style="--clip-start: ellipse(0 0 at 0 0); --clip-end: ellipse(150% 150% at 0 0);"><img src="https://www.skyrider.edu.np/media/slider_img/fourth.png"/><img src="https://www.skyrider.edu.np/media/slider_img/fourth.png"/></div>
+    
+</div>
 
             {{-- HTML ENDS HERE BODY PART --}}
         </div>
