@@ -716,13 +716,13 @@ body {
                 </ul>
               </div>
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 
               {{-- Teacher's Info Starts Here --}}
             <ul class="cards">
                 <li>
-                  <a href="https://www.facebook.com/madan.puri.10" target="_blank" class="card">
+                  <a href="https://i.imgur.com/QI6aNqG.jpeg" target="_blank" class="card">
                     <img src="https://i.imgur.com/QI6aNqG.jpeg" class="card__image" alt="" />
                     <div class="card__overlay">
                       <div class="card__header">
@@ -740,7 +740,7 @@ body {
                 <li>
 
 
-                  <a href="https://www.facebook.com/durga.puri.3386" target="_blank" class="card">
+                  <a href="https://i.imgur.com/ZtaQp16.jpg" target="_blank" class="card">
                     <img src="https://i.imgur.com/ZtaQp16.jpg" class="card__image" alt="" />
                     <div class="card__overlay">        
                       <div class="card__header">
@@ -758,7 +758,7 @@ body {
 
 
                 <li>
-                    <a href="https://www.facebook.com/narayan.shrestha.549668"  target="_blank" class="card">
+                    <a href="https://i.imgur.com/HDGRASJ.jpg"  target="_blank" class="card">
                       <img src="https://i.imgur.com/HDGRASJ.jpg" class="card__image" alt="" />
                       <div class="card__overlay">
                         <div class="card__header">
@@ -776,7 +776,7 @@ body {
 
 
                 <li>
-                  <a href="https://www.facebook.com/selfish.prakash" target="_blank" class="card">
+                  <a href="https://i.imgur.com/y16J5jQ.jpg" target="_blank" class="card">
                     <img src="https://i.imgur.com/y16J5jQ.jpg" class="card__image" alt="" />
                     <div class="card__overlay">
                       <div class="card__header">
@@ -793,7 +793,7 @@ body {
                 </li>   
 
                 <li>
-                    <a href="https://www.facebook.com/rabinjee" target="_blank" class="card">
+                    <a href="https://i.imgur.com/XBfCS6N.jpg" target="_blank" class="card">
                       <img src="https://i.imgur.com/XBfCS6N.jpg" class="card__image" alt="" />
                       <div class="card__overlay">
                         <div class="card__header">
@@ -815,7 +815,7 @@ body {
 
 
                   <li>
-                    <a href="https://www.facebook.com/sharad.adhikari.5439" target="_blank" class="card">
+                    <a href="https://i.imgur.com/VU6qwWW.jpg" target="_blank" class="card">
                       <img src="https://i.imgur.com/VU6qwWW.jpg" class="card__image" alt="" />
                       <div class="card__overlay">
                         <div class="card__header">
@@ -838,7 +838,7 @@ body {
 
 
                   <li>
-                    <a href="https://www.facebook.com/sharad.adhikari.5439" target="_blank" class="card">
+                    <a href="https://i.ibb.co/7YFmMpp/govinda.jpg" target="_blank" class="card">
                       <img src="https://i.ibb.co/7YFmMpp/govinda.jpg" class="card__image" alt="" />
                       <div class="card__overlay">
                         <div class="card__header">
@@ -861,7 +861,7 @@ body {
 
 
                   <li>
-                    <a href="https://www.facebook.com/sharad.adhikari.5439" target="_blank" class="card">
+                    <a href="https://i.ibb.co/Bw5jgzx/rajesh.jpg" target="_blank" class="card">
                       <img src="https://i.ibb.co/Bw5jgzx/rajesh.jpg" class="card__image" alt="" />
                       <div class="card__overlay">
                         <div class="card__header">

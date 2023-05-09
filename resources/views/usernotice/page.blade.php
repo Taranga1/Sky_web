@@ -344,10 +344,9 @@ button {
                 </tr>
             </thead>
             <tbody>
-@foreach ($notice as $key =>$notices)
-
+                @foreach ($notice as $key => $notices)
                 <tr>
-                    <td> {{$notices->id}}</td>
+                    <td>{{++$key}}</td>
                     <td> <b>{{$notices->title}}</b></td>
                     <td> {{$notices->description}} </td>
                     <td> {{$notices->date}} </td>

@@ -65,7 +65,7 @@
   top: 0;
 }
 .image-container .image img:nth-of-type(1) {
-  filter: grayscale(1) brightness(40%);
+  filter: grayscale(1) brightness(100%);
 }
 .image-container .image img:nth-of-type(2) {
   -webkit-clip-path: var(--clip-start);

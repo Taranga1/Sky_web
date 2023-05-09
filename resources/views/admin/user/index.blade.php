@@ -16,7 +16,6 @@
                         <td>ID</td>
                         <td>Username</td>
                         <td>Email</td>
-                        <td>Edit</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -25,7 +24,7 @@
                             <td>{{$users->id}}</td>
                             <td>{{$users->name}}</td>
                             <td>{{$users->email}}</td>
-                            <td><a href="{{ url('admin/user/'.$users->id)}}" class="btn btn-success">Edit</a></td>
+                            {{-- <td><a href="{{ url('admin/user/'.$users->id)}}" class="btn btn-success">Edit</a></td> --}}
                         </tr>
                     @endforeach
                 </tbody>

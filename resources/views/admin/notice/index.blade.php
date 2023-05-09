@@ -22,9 +22,9 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($notices as $notice)
+                    @foreach ($notices as $key => $notice)
                         <tr>
-                            <td>{{$notice->id}}</td>
+                            <td>{{++$key}}</td>
                             <td><b>{{$notice->title}}<b></td>
                             <td>{{$notice->description}}</td>
                             <td>{{$notice->date}}</td>

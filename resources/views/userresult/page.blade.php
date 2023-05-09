@@ -352,10 +352,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
                 </tr>
             </thead>
             <tbody>
-@foreach ($result as $key =>$results)
-
+                @foreach ($result as $key => $results)
                 <tr>
-                    <td> {{$results->id}}</td>
+                    <td>{{++$key}}</td>
                     <td> {{$results->symbolnumber}}</td>
                     <td> {{$results->gpa}} </td>
                     <td> {{$results->term}}</td>

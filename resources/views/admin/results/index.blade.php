@@ -22,9 +22,9 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($results as $result)
+                    @foreach ($results as $key => $result)
                         <tr>
-                            <td>{{$result->id}}</td>
+                            <td>{{++$key}}</td>
                             <td>{{$result->symbolnumber}}</td>
                             <td>{{$result->gpa}}</td>
                             <td>{{$result->term}}</td>
